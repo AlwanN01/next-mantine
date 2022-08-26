@@ -4,5 +4,12 @@ module.exports = {
   theme: {
     extend: {}
   },
-  plugins: []
+  corePlugins: {
+    preflight: false
+  },
+  plugins: [require('daisyui')],
+  daisyui: {
+    base: false,
+    darkTheme: 'night'
+  }
 }

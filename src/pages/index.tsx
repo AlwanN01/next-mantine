@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Button, SimpleGrid } from '@mantine/core'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import CallHai from 'components/CallHai'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
       </Head>
       <header>Home</header>
       <Link href='/hello' passHref>
-        <Button classNames={{ root: 'bg-green-600 hover:bg-green-500' }} component='a' color='red'>
+        <Button classNames={{ root: 'btn btn-primary' }} unstyled component='a' color='red'>
           Next link button
         </Button>
       </Link>
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         ref={node => console.log(node)}>
         Open in new tab
       </Button>
+      <CallHai>{(e: any) => <p>{e}</p>}</CallHai>
       <SimpleGrid cols={2}>
         <h1>1</h1>
         <h2>2</h2>
